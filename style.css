@@ -97,7 +97,7 @@ html {
   background-size:cover;
 }
 body {
-  max-width:800px;
+  max-width:1000px;
   margin:25px auto;
 }
 header, #content, footer { 
@@ -127,6 +127,9 @@ ul.main-menu li a:hover {
 ul.main-menu li a.active {
   color:#FFFFFF;
   border-bottom-color:#EF6D3D;
+}
+embed.document {
+  color: #FFFF 
 }
 
 /* Utility classes */

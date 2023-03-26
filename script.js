@@ -1,6 +1,8 @@
-// Wait for the document to load before running the script 
+ // Wait for the document to load before running the script 
 (function ($) {
   
+       
+
   // We use some Javascript and the URL #fragment to hide/show different parts of the page
   // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#Linking_to_an_element_on_the_same_page
   $(window).on('load hashchange', function(){
@@ -13,6 +15,7 @@
     $('.main-menu a').removeClass('active');
     var region = location.hash.toString() || $('.main-menu a:first').attr('href');
     
+    
     // Now show the region specified in the URL hash
     $(region).show();
     
@@ -22,9 +25,17 @@
     // Alternate method: Use AJAX to load the contents of an external file into a div based on URL fragment
     // This will extract the region name from URL hash, and then load [region].html into the main #content div
     var divId = (location.hash.toString() || '#first').slice(1);
-    if (divId != 'home'){
-      $("#texto-"+divId).innerText = $.get(divId+'.txt')
+    console.log(divId);
+    if(divId !== 'home'){
+      var texto = $.get('docs/'+divId+'.txt');
+      $('#texto-'+divId).innerText = texto.responseText
     }
-  });
+
+  });    
+
   
+
 })(jQuery);
+
+
+
