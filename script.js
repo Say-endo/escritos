@@ -31,8 +31,9 @@
       var texto = $.get('docs/'+divId+'.txt');
       console.log(texto.responseText);
       console.log('TExto:'+$('#texto-'+divId).innerText);
-      $('#texto-'+divId).innerText = texto.responseText
-      console.log($('#texto-'+divId).innerText)
+      var par = $('#texto-'+divId)
+      par.text(texto.innerText)
+      console.log("TExto change:"+$('#texto-'+divId).innerText)
     }
 
   });    
