@@ -24,7 +24,7 @@
     var region = location.hash.toString() || '#first';
     var texto = $.get(region.slice(1) + '.txt');
     if (texto){      
-      document.getElementById("texto").innerText = text.responseText;
+      document.getElementById("texto").innerText = texto.responseText;
     }
     
   });
