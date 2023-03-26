@@ -27,8 +27,12 @@
     var divId = (location.hash.toString() || '#first').slice(1);
     console.log(divId);
     if(divId !== 'home'){
+      console.log('docs/'+divId+'.txt');
       var texto = $.get('docs/'+divId+'.txt');
+      console.log(texto.responseText);
+      console.log('TExto:'+$('#texto-'+divId).innerText);
       $('#texto-'+divId).innerText = texto.responseText
+      console.log($('#texto-'+divId).innerText)
     }
 
   });    
