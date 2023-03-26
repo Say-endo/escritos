@@ -23,8 +23,8 @@
     // This will extract the region name from URL hash, and then load [region].html into the main #content div
     var region = location.hash.toString() || '#first';
     console.log(region.slice(1));
-    var uno = $.get(region.slice(1) + '.html');
-    console.log(uno);
+    var uno = $.get(region.slice(1) + '.txt');
+    document.getElementById("texto").innerText = uno.responseText
     
   });
   
