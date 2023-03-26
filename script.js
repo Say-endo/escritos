@@ -21,8 +21,10 @@
 
     // Alternate method: Use AJAX to load the contents of an external file into a div based on URL fragment
     // This will extract the region name from URL hash, and then load [region].html into the main #content div
-    // var region = location.hash.toString() || '#first';
-    // $('#content').load(region.slice(1) + '.html')
+    var region = location.hash.toString() || '#first';
+    console.log(region.slice(1));
+    var uno = $.get(region.slice(1) + '.html');
+    console.log(uno);
     
   });
   
